@@ -8,4 +8,4 @@ LINES=$5
 
 filelist=$(python3 /scanforstring.py -f "$CODEFOLDERS" -e "$FILEEXTENSIONS" -r "$REGEX" -m $MATCH -l $LINES)
 
-echo ::set-output name=filelist::$filelist
+echo "{filelist}={$filelist}" >> $GITHUB_OUTPUT
